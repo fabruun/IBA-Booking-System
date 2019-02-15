@@ -14,9 +14,9 @@ class CreateClassesTable extends Migration
     public function up()
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('classid');
             $table->string('classname');
-            $table->foreign('classname')->references('rekvirantid')->on('rekvirants');
+            $table->foreign('classname')->references('uid')->on('users');
             $table->string('teacher');
             $table->smallInteger('numberofstudents')->unsigned();
             $table->timestamps();

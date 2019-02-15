@@ -14,8 +14,10 @@ class CreateRekvirantsTable extends Migration
     public function up()
     {
         Schema::create('rekvirants', function (Blueprint $table) {
+            $table->string('id');
             $table->string('rekvirantid');
-            $table->primary('rekvirantid');
+            $table->foreign('rekvirantid')->references('uid')->on('users');
+            $table->unique('rekvirantid', 'id');
             $table->timestamps();
         });
     }
