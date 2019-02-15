@@ -14,14 +14,19 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->string('reservationsid');
-            $table->primary('reservationsid');
             $table->string('rekvirantid');
             $table->foreign('rekvirantid')
-                  ->references('rekvirantid')
-                  ->on('rekvirants')
+                  ->references('uid')
+                  ->on('users')
+                  ->onDelete('cascade');
+            $table->string('roomid');
+            $table->foreign('roomid')
+                  ->references('roomid')
+                  ->on('rooms')
                   ->onDelete('cascade');
             $table->time('tid');
+            $table->primary(['roomid', 'tid']);
+            $table->unique(['tid','rekvirantid']);
             $table->timestamps();
         });
     }
