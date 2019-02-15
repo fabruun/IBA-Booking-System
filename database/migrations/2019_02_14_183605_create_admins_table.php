@@ -16,7 +16,10 @@ class CreateAdminsTable extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('adminid');
             $table->string('adminsig');
-            $table->foreign('adminsig')->references('uid')->on('users');
+            $table->foreign('adminsig')
+                  ->references('uid')
+                  ->on('users')
+                  ->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

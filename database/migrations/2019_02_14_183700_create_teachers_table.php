@@ -16,7 +16,10 @@ class CreateTeachersTable extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->increments('teacherid');
             $table->string('teachersig');
-            $table->foreign('teachersig')->references('uid')->on('users');
+            $table->foreign('teachersig')
+                  ->references('uid')
+                  ->on('users')
+                  ->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

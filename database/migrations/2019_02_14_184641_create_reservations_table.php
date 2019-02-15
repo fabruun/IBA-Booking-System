@@ -17,7 +17,10 @@ class CreateReservationsTable extends Migration
             $table->string('reservationsid');
             $table->primary('reservationsid');
             $table->string('rekvirantid');
-            $table->foreign('rekvirantid')->references('rekvirantid')->on('rekvirants');
+            $table->foreign('rekvirantid')
+                  ->references('rekvirantid')
+                  ->on('rekvirants')
+                  ->onDelete('cascade');
             $table->time('tid');
             $table->timestamps();
         });
