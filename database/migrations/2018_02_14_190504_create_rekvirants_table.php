@@ -20,7 +20,7 @@ class CreateRekvirantsTable extends Migration
                   ->references('uid')
                   ->on('users')
                   ->onDelete('cascade');
-            $table->unique('rekvirantid', 'id');
+            $table->primary(['rekvirantid', 'id']);
             $table->timestamps();
         });
     }
