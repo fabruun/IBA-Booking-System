@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                        <a href="#">Bookings</a>
+                        <a href="#">Bookinger</a>
                         <p style="margin-top: 2em;"><b>Navn: </b>Hr. Nielsen</p>
                         <p><b>Email: </b>nielsen@gmail.com</p>
                 </div>
@@ -23,3 +23,4 @@
     </div>
 </div>
 @endsection
+

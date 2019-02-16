@@ -14,7 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
  
 Auth::routes(['verify' => true, 'register' => false]);
+=======
+
+Auth::routes(['register' => false]);
+>>>>>>> origin/master
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', function (){
+    return redirect('home');
+});
