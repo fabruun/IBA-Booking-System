@@ -14,14 +14,16 @@ class CreateClassesTable extends Migration
     public function up()
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->increments('classid');
+            $table->string('classid');
+            $table->primary('classid');
             $table->string('classname');
-            $table->foreign('classname')
+            /*$table->foreign('classname')
                   ->references('uid')
                   ->on('users')
-                  ->onDelete('cascade');
+                  ->onDelete('cascade');*/
             $table->string('teacher');
             $table->smallInteger('numberofstudents')->unsigned();
+            $table->string('profile');
             $table->timestamps();
         });
     }

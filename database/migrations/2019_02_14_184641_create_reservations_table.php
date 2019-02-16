@@ -15,10 +15,10 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->string('rekvirantid');
-            $table->foreign('rekvirantid')
+            /*$table->foreign('rekvirantid')
                   ->references('uid')
                   ->on('users')
-                  ->onDelete('cascade');
+                  ->onDelete('cascade');*/
             $table->string('roomid');
             $table->foreign('roomid')
                   ->references('roomid')

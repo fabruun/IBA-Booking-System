@@ -27,6 +27,12 @@ class HomeController extends Controller
     { if(Auth::check()){
         return view('home');
     }
-        return view('welcome');
+        return view('home');
+    }
+
+    public function show(){
+        if(Auth::check()){
+            return view('home');
+        }
     }
 }
