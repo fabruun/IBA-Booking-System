@@ -21,9 +21,13 @@ class CreateTeachersTable extends Migration
                   ->references('uid')
                   ->on('users')
                   ->onDelete('cascade');*/
+            $table->enum('type', ['teacher']);
+            $table->foreign('type')
+                  ->references('type')
+                  ->on('users')
+                  ->onDelete('cascade');
             $table->string('name');
             $table->string('email');
-            $table->string('profile');
             $table->timestamps();
         });
     }
