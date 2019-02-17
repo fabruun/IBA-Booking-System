@@ -16,10 +16,10 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->string('roomid');
             $table->primary('roomid');
-            $table->smallInteger('numberofpersonlimation')->unsigned();
-            $table->smallInteger('roomwidth')->unsigned();
-            $table->smallInteger('roomlength')->unsigned();
-            $table->smallInteger('areasizeofroom')->unsigned();
+            $table->integer('personlimit');
+            $table->integer('roomwidth');
+            $table->integer('roomlength');
+            $table->integer('areasizeofroom');
             $table->timestamps();
         });
     }
