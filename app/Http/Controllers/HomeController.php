@@ -24,8 +24,11 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    { if(Auth::check()){
-        return view('home');
+    { 
+        $users = \App\User::all();
+        
+        if(Auth::check()){
+        return view('home', ['users' => $users]);
     }
         return view('home');
     }

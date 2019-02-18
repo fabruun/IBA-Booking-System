@@ -13,10 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                         <a href="#">Bookinger</a>
-                        <p style="margin-top: 2em;"><b>Navn: </b>Hr. Nielsen</p>
-                        <p><b>Email: </b>nielsen@gmail.com</p>
+                        <p style="margin-top: 2em;"><b>Navn: </b>{{(Auth::user()->name)}}</p>
+                        <p><b>Email: </b>{{(Auth::user()->email)}}</p>
                 </div>
             </div>
         </div>
