@@ -24,6 +24,13 @@
                         
                         <div class="personal_bookings">
                                 <h4 style="margin-top: 2em;">Dine reservationer:</h4>
+                                @foreach ($reservations as $reservation)
+                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">   
+                                    <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
+                                    <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
+                                    <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
+                                </div>   
+                                @endforeach
                         </div>    
                 </div>
             </div>

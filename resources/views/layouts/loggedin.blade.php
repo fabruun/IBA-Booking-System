@@ -61,9 +61,10 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('home') }}">
+                              <a class="dropdown-item" href="{{ route('home.index') }}"> {{-- evt. rette denne route til .index for at virke --}}
                                   Profile
-                              </a>
+                              </a> 
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
