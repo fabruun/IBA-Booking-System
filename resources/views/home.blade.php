@@ -13,9 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="#">Bookinger</a>
-                        <p style="margin-top: 2em;"><b>Navn: </b>{{(Auth::user()->name)}}</p>
-                        <p><b>Email: </b>{{(Auth::user()->email)}}</p>
+                        <h2>Velkommen {{(Auth::user()->name)}}!</h2>
+
+                        <div class="profile_info">
+                            <h4 style="margin-top: 2em;">Dine informationer:</h4>
+                            <p><b>Brugernavn: </b>{{(Auth::user()->uid)}}</p>
+                            <p><b>Navn: </b>{{(Auth::user()->name)}}</p>
+                            <p><b>Email: </b>{{(Auth::user()->email)}}</p>
+                        </div>
+                        
+                        <div class="personal_bookings">
+                                <h4 style="margin-top: 2em;">Dine reservationer:</h4>
+                        </div>    
                 </div>
             </div>
         </div>
