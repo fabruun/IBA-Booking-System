@@ -43,7 +43,7 @@
                         <a href="#" class="nav-link">Bookinger</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Book et lokale</a>
+                        <a href="/bookinger" class="nav-link">Book et lokale</a>
                     </li>
                     @guest
                         <li class="nav-item">
@@ -61,6 +61,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="{{ route('home') }}">
+                                  Profile
+                              </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
