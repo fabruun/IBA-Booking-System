@@ -13,11 +13,25 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                        <h2>Velkommen {{(Auth::user()->name)}}!</h2>
 
-                        <a href="#">Bookinger</a>
-                        <p style="margin-top: 2em;"><b>Navn: </b></p>
-                        <p><b>Email: </b>nielsen@gmail.com</p>
-
+                        <div class="profile_info">
+                            <h4 style="margin-top: 2em;">Dine informationer:</h4>
+                            <p><b>Brugernavn: </b>{{(Auth::user()->uid)}}</p>
+                            <p><b>Navn: </b>{{(Auth::user()->name)}}</p>
+                            <p><b>Email: </b>{{(Auth::user()->email)}}</p>
+                        </div>
+                        
+                        <div class="personal_bookings">
+                                <h4 style="margin-top: 2em;">Dine reservationer:</h4>
+                                @foreach ($reservations as $reservation)
+                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">   
+                                    <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
+                                    <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
+                                    <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
+                                </div>   
+                                @endforeach
+                        </div>    
                 </div>
             </div>
         </div>

@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
+ 
+Auth::routes(['verify' => true, 'register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -23,4 +23,5 @@ Route::get('/', function (){
     return redirect('home');
 });
 
-Route::resource('/rooms', 'RoomController');
+Route::get('/bookinger', 'RoomListController@index');
+Route::resource('home', 'ReservationController');
