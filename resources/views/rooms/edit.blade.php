@@ -22,6 +22,11 @@
                             <li><b>Areal:</b> {{ $room->areasizeofroom }} m<sup>2</sup> </li>
                             <li><b>Antal:</b> {{ $room->personlimit }}</li>
                         </div>
+                        <div style="margin-top:1em;">
+                            <a href="/rooms/{{ $room->id }}"><button class="btn btn-primary" style="margin-right:2em;">Book nu</button></a>
+                            <a href=""><button class="btn btn-primary">Omroker</button></a>
+                        </div>
+
                     </div>
                 </div>
             </div>
