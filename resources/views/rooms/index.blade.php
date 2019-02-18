@@ -19,8 +19,7 @@
                     @foreach($rooms as $room)
 
                         <tr>
-                            <li style="list-style:none; margin:15px;">{{ $room->roomid }}</li>
-                            <a href="#"><button type="button" name="button" class="btn btn-primary" style="margin-left:15px;">Book lokale</button></a>
+                            <a style="list-style:none; margin:15px;" href="/rooms/{{ $room->roomid }}">{{ $room->roomid }}</a>
                         </tr>
                     @endforeach
                 </table>
