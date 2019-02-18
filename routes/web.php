@@ -23,5 +23,5 @@ Route::get('/', function (){
     return redirect('home');
 });
 
-Route::get('/bookinger', 'RoomListController@index');
+Route::resource('/rooms', 'RoomController');
 Route::resource('home', 'ReservationController');
