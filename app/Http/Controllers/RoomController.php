@@ -61,9 +61,9 @@ class RoomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) { //example.com/projects/1/edit
+    public function edit($roomid) { //example.com/projects/1/edit
         if(Auth::check()){
-        $room = Room::find($id);
+        $room = Room::find($roomid);
         return view('rooms.edit', compact('room'));
         }
         return redirect('/login');
