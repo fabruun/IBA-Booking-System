@@ -19,7 +19,7 @@
                         @foreach($rooms as $room)
 
                             <tr>
-                                <a style="list-style:none; margin:15px;" href="/rooms/{{ $room->roomid }}">{{ $room->roomid }}</a>
+                                <a style="list-style:none; margin:15px;" href="/rooms/{{ $room->id }}/edit">{{ $room->roomid }}</a>
 
                             </tr>
                         @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use \App\Room;
+use Illuminate\Support\Facades\Auth;
 
 
 class RoomController extends Controller
@@ -58,9 +59,11 @@ class RoomController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id) { //example.com/projects/1/edit
-
+        if(Auth::check()){
         $room = Room::find($id);
         return view('rooms.edit', compact('room'));
+        }
+        return redirect('/login');
 
     }
 

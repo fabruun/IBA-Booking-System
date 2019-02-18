@@ -14,9 +14,10 @@ class CreateRoomsTable extends Migration
     public function up()
     {
         Schema::create('rooms', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('roomid');
-            $table->primary('roomid');
-            $table->smallInteger('numberofpersonlimation')->unsigned();
+            $table->unique('roomid');
+            $table->smallInteger('personlimit')->unsigned();
             $table->smallInteger('roomwidth')->unsigned();
             $table->smallInteger('roomlength')->unsigned();
             $table->smallInteger('areasizeofroom')->unsigned();

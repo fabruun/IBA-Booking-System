@@ -2,52 +2,20 @@
 
 @section('content')
 
-    <h1 class="title">Edit Project</h1>
-
-    <form method="POST" action="/projects/{{ $room->roomid }}">
-
-    {{ method_field('PATCH') }} <!-- This way we can sneak in a PATCH request -->
-
-        {{ csrf_field() }}
-        <div class="field">
-
-            <label for="title" class="label">Title</label>
-
-            <div class="control">
-
-                <input type="text" class="input" name="title" placeholder="Title" value="{{ $room->roomlength }}">
-
-            </div>
-
-
+    <div class="card">
+        <div class="card-body">
+            <h1 class="title" style="margin:20px;">Lokalenummer {{ $room->roomid }}</h1>
+            <ul style="list-style: none;">
+                <li><b>Bredde:</b> {{ $room->roomwidth }} mm</li>
+                <li><b>Længde:</b> {{ $room->roomlength }} mm</li>
+                <li><b>Areal:</b> {{ $room->areasizeofroom }} m<sup>2</sup></li>
+                <li><b>Antal personer:</b> {{ $room->personlimit }} personer</li>
+            </ul>
+            <a href="#"><button class="btn btn-primary">Book lokale</button></a>
         </div>
-
-        <div class="field">
-
-            <label for="" class="label">Description</label>
-
-            <div class="control">
-
-                <textarea name="description" class="textarea" >{{ $room->roomwidth }}</textarea>
-
-            </div>
-
-
-        </div>
-
-        <div class="field">
-
-            <div class="control">
-
-                <button type="submit" class="button-is-link">Update Project</button>
-
-            </div>
-
-
-        </div>
+    </div>
 
 
 
-    </form>
 
 @endsection
