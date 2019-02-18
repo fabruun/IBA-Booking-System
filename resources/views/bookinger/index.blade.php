@@ -1,11 +1,11 @@
 @extends('layouts.loggedin')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Profile</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,12 +13,20 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="#">Bookinger</a>
-                        <p style="margin-top: 2em;"><b>Navn: </b>{{(Auth::user()->name)}}</p>
-                        <p><b>Email: </b>{{(Auth::user()->email)}}</p>
                 </div>
+                <table style="margin:15px;">
+                  <h1 style="padding:15px;">Lokaler</h1>
+                    @foreach($rooms as $room)
+
+                        <tr>
+                            <li style="list-style:none; margin:15px;">{{ $room->roomid }}</li>
+                            <a href="#"><button type="button" name="button" class="btn btn-primary" style="margin-left:15px;">Book lokale</button></a>
+                        </tr>
+                    @endforeach
+                </table>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

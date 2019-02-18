@@ -21,6 +21,11 @@ class CreateStudentsTable extends Migration
                   ->references('uid')
                   ->on('users')
                   ->onDelete('cascade');*/
+            $table->enum('type', ['student']);
+            $table->foreign('type')
+                  ->references('type')
+                  ->on('users')
+                  ->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

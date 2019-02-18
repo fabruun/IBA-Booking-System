@@ -21,9 +21,13 @@ class CreateClassesTable extends Migration
                   ->references('uid')
                   ->on('users')
                   ->onDelete('cascade');*/
+            $table->enum('type', ['class']);
+            $table->foreign('type')
+                  ->references('type')
+                  ->on('users')
+                  ->onDelete('cascade');
             $table->string('teacher');
             $table->smallInteger('numberofstudents')->unsigned();
-            $table->string('profile');
             $table->timestamps();
         });
     }
