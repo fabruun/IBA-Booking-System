@@ -64,6 +64,7 @@
     <findStrings>
       <find>Laravel</find>
       <find>navbar-brand</find>
+      <find>home</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,7 +74,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183735_create_rooms_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_rekvirants_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_185347_create_rekvirants_table.php" />
@@ -89,7 +89,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183700_create_teachers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183713_create_classes_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
@@ -294,7 +293,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -425,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183735_create_rooms_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-631" />
@@ -496,7 +488,7 @@
         <state relative-caret-position="164">
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,11 +1,11 @@
 @extends('layouts.loggedin')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Profile</div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Profile</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -21,20 +21,20 @@
                             <p><b>Navn: </b>{{(Auth::user()->name)}}</p>
                             <p><b>Email: </b>{{(Auth::user()->email)}}</p>
                         </div>
-                        
+
                         <div class="personal_bookings">
                                 <h4 style="margin-top: 2em;">Dine reservationer:</h4>
                                 @foreach ($reservations as $reservation)
-                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">   
+                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
                                     <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
                                     <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
                                     <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
-                                </div>   
+                                </div>
                                 @endforeach
-                        </div>    
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
+s
