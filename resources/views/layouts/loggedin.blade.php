@@ -43,7 +43,7 @@
                         <a href="#" class="nav-link">Bookinger</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/bookinger" class="nav-link">Book et lokale</a>
+                        <a href="/rooms" class="nav-link">Book et lokale</a>
                     </li>
                     @guest
                         <li class="nav-item">
