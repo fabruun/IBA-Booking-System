@@ -19,7 +19,10 @@
                     @foreach($rooms as $room)
 
                         <tr>
-                            <a style="list-style:none; margin:15px;" href="/rooms/{{ $room->id }}/edit">{{ $room->roomid }}</a>
+                                <div class="card" style="width:8em; margin-left:2em; padding:1em; margin-bottom:2em; text-align: center;">
+                                <a style="list-style:none; margin:15px;" href="/rooms/{{ $room->id }}/edit">{{ $room->roomid }}</a>
+                                <li style="list-style: none; ">{{ $room->personlimit }} personer</li>
+                            </div>
                         </tr>
                     @endforeach
                 </table>

@@ -13,10 +13,15 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                        <h1>Lokale {{ $room->roomid }}</h1>
+                            <div class="d-flex justify-content-md-between text-center">
+                                <div class="card" style="width:7em; height: 5em;">1</div>
+                                <div class="card" style="width:7em; height: 5em;">2</div>
+                                <div class="card" style="width:7em; height: 5em;">3</div>
+                                <div class="card" style="width:7em; height: 5em;">4</div>
+                                <div class="card" style="width:7em; height: 5em;">5</div>
+                            </div>
                     </div>
-                    <table style="margin:15px;">
-                        <h1 style="padding:15px;">{{ $room->roomid }}</h1>
-                    </table>
                 </div>
             </div>
         </div>

@@ -70,7 +70,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183647_create_students_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183700_create_teachers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183713_create_classes_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
@@ -82,10 +81,17 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/RoomListController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SingleRoomController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/rooms/show.blade.php" />
         <option value="$PROJECT_DIR$/iba-rooms.sql" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RoomController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/book/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" />
+        <option value="$PROJECT_DIR$/resources/views/rooms/book.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183735_create_rooms_table.php" />
@@ -238,12 +244,20 @@
               <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="rooms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -411,13 +425,6 @@
         <state relative-caret-position="-788" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183713_create_classes_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183700_create_teachers_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183647_create_students_table.php" />
@@ -575,10 +582,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rooms/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
+        <state relative-caret-position="336">
+          <caret line="22" column="106" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -595,12 +609,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="1372">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding>
-            <element signature="e#542#562#0#HTML" expanded="true" />
-            <element signature="e#679#729#0#HTML" expanded="true" />
-            <element signature="e#688#709#0#HTML" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

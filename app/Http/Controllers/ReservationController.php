@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Reservation;
+use App\Booking;
 
 class ReservationController extends Controller
 {
@@ -45,9 +46,9 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show() {
+        $reservations = Room::find();
+        return view('rooms.show', compact('reservations'));
     }
 
     /**
