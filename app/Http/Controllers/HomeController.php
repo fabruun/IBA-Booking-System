@@ -30,7 +30,7 @@ class HomeController extends Controller
         if(Auth::check()){
         return view('home', ['users' => $users]);
     }
-        return view('home');
+        return view('login');
     }
 
     public function show(){
