@@ -25,9 +25,7 @@
                         <div class="day"><a href="#">4/2-2019</a></div>
                         <h4>Fredag</h4>
                         <div class="day"><a href="#">5/2-2019</a></div>
-
                     </div>
-
                 </div>
             </div>
         </div>
