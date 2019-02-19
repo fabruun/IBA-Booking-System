@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19a6d485-b31e-4ede-bc15-b82418419221" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/IBA_Booking_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IBA_Booking_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_14_183735_create_rooms_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rooms/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2012_02_19_100125_create_classes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +34,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_02_19_142735_create_classnames_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="437">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="e#7#45#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding>
                 <element signature="e#6#44#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -69,11 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_rekvirants_table.php" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_14_190504_create_rekvirants_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183605_create_admins_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183647_create_students_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183700_create_teachers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183713_create_classes_table.php" />
@@ -99,8 +108,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_19_152430_create_bookings_table.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/rooms/show.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_02_19_100115_create_rekvirents_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2013_02_19_100115_create_rekvirents_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2031_02_19_100115_create_rekvirents_table.php" />
@@ -111,15 +118,22 @@
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2012_02_19_100125_create_classes_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2010_02_14_185347_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_14_183735_create_rooms_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_02_14_184641_create_reservations_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php" />
+        <option value="$PROJECT_DIR$/alternative_db.sql" />
+        <option value="$PROJECT_DIR$/database/migrations/2012_02_19_100125_create_classes_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/ClassName.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_19_142650_create_classnames_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_19_142735_create_classnames_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_02_19_142735_create_classnames_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php" />
       </list>
     </option>
   </component>
@@ -236,6 +250,11 @@
             <path>
               <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,17 +262,6 @@
               <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBA_Booking_System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBA_Booking_System" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,18 +309,18 @@
       <workItem from="1550166535959" duration="21161000" />
       <workItem from="1550478051881" duration="3185000" />
       <workItem from="1550497971449" duration="1769000" />
-      <workItem from="1550564625277" duration="9604000" />
+      <workItem from="1550564625277" duration="13043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40505000" />
+    <option name="totallyTimeSpent" value="43944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34942362" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34870318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -327,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2163522" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2163522" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,58 +368,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-631" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6014" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-788" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183713_create_classes_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183700_create_teachers_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_183647_create_students_table.php" />
     <entry file="file://$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="e#33#72#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,16 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -627,6 +579,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/alternative_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -637,36 +596,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2010_02_14_185347_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="24" column="5" lean-forward="true" selection-end-line="35" />
+        <state relative-caret-position="168">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
-            <element signature="e#6#44#0#PHP" expanded="true" />
+            <element signature="e#33#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Classname.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="224">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2012_02_19_100125_create_classes_table.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="18" column="103" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_02_14_184641_create_reservations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        <state relative-caret-position="504">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <element signature="e#6#44#0#PHP" expanded="true" />
+            <element signature="e#23#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,13 +649,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_14_184641_create_reservations_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="128">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
             <element signature="e#6#44#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#44#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2012_02_19_100125_create_classnames_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="39" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_19_142650_create_classnames_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_02_19_142735_create_classnames_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_02_14_185347_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#44#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2009_02_19_100115_create_rekvirents_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
         </state>
       </provider>
     </entry>

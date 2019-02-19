@@ -14,8 +14,8 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->string('rekvirantid');
             $table->foreign('rekvirantid')
-                ->references('uid')
-                ->on('users')
+                ->references('rekvirent')
+                ->on('rekvirents')
                 ->onDelete('cascade');
             $table->string('roomid');
             $table->foreign('roomid')

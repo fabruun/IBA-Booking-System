@@ -14,7 +14,9 @@ class CreateRekvirentsTable extends Migration
     public function up()
     {
         Schema::create('rekvirents', function (Blueprint $table) {
-            $table->string('rekvirent', 16)->primary();
+           $table->increments('id');
+            $table->string('rekvirent')->nullable();
+            $table->unique('rekvirent');
             $table->timestamps();
         });
     }
