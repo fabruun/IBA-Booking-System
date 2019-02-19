@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IBA_Booking_System.iml" filepath="$PROJECT_DIR$/.idea/IBA_Booking_System.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/database/migrations/.idea/migrations.iml" filepath="$USER_HOME$/Desktop/database/migrations/.idea/migrations.iml" />
     </modules>
   </component>
 </project>

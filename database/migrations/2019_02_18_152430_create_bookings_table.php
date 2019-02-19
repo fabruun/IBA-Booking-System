@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class CreateBookingsTable extends Migration
 {
     /**
@@ -18,14 +16,13 @@ class CreateBookingsTable extends Migration
             $table->date('date');
             $table->time('tidspunkt');
             $table->foreign('tidspunkt')
-                  ->references('tid')
-                  ->on('reservations')
-                  ->onDelete('cascade');
+                ->references('tid')
+                ->on('reservations')
+                ->onDelete('cascade');
             $table->boolean('isReserved');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

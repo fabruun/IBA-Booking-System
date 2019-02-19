@@ -1,8 +1,10 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateRoomsTable extends Migration
+
+class CreateClassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -11,17 +13,14 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
+        Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('roomid');
-            $table->unique('roomid');
-            $table->integer('personlimit');
-            $table->integer('roomwidth');
-            $table->integer('roomlength');
-            $table->integer('areasizeofroom');
+            $table->string('klassenavn', 16)->unique();
+            $table->foreign('klassenavn')->references('rekvirent')->on('rekvirents')->onDelete('cascade');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -29,6 +28,6 @@ class CreateRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('classes');
     }
 }
