@@ -41,7 +41,10 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     <li class="nav-item">
-                        <a href="/admin" class="nav-link">Admin</a>
+                        <a href="#" class="nav-link">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Bookinger</a>
                     </li>
                     <li class="nav-item">
                         <a href="/rooms" class="nav-link">Book et lokale</a>
@@ -62,9 +65,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('home.index') }}"> {{-- evt. rette denne route til .index for at virke --}}
-                                  Profile
-                              </a> 
+                                <a class="dropdown-item" href="{{ route('home.index') }}"> {{-- evt. rette denne route til .index for at virke --}}
+                                    Profile
+                                </a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

@@ -63,7 +63,7 @@ class RoomController extends Controller
      */
     public function edit($roomid) { //example.com/projects/1/edit
         if(Auth::check()){
-        $room = Room::find($roomid);
+        $room = Room::findOrFail($roomid);
         return view('rooms.edit', compact('room'));
         }
         return redirect('/login');

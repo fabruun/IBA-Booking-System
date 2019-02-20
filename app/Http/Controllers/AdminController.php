@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Rekvirent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-use App\Reservation;
-use App\Booking;
-
-class ReservationController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,12 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $reservations = \App\Reservation::all();
-        return view('home', compact('reservations'));
-      }
+        if(Auth::check()){
+            $rekvirents = \App\Rekvirent::all()->sortBy('rekvirentid');
+            return view('admin.index', compact('rekvirents'));
+        }
+        return redirect('/login');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +28,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create');
     }
 
     /**
@@ -35,9 +37,15 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Rekvirent $rekvirent)
     {
-        //
+        Rekvirent::create([
+            'uid' => request('uid'),
+            'name' => request('name'),
+            'email' => request('email'),
+            'password' => request('password')
+        ]);
+        return redirect('/admin');
     }
 
     /**
@@ -46,9 +54,9 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show() {
-        $reservations = Room::findOrFail();
-        return view('rooms.show', compact('reservations'));
+    public function show(Rekvirent $rekvirent)
+    {
+        return view('admin.show', compact('rekvirent'));
     }
 
     /**
@@ -57,9 +65,9 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rekvirent $rekvirent)
     {
-        //
+        return view('admin.edit', compact('rekvirent'));
     }
 
     /**
@@ -69,9 +77,13 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Rekvirent $rekvirent)
     {
-        //
+        $rekvirent->rekvirent = request('rekvirent');
+
+        $rekvirent->save();
+
+        return redirect('/admin');
     }
 
     /**
@@ -80,8 +92,9 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Rekvirent $rekvirent)
     {
-        //
+        $rekvirent->delete();
+        return redirect('admin');
     }
 }

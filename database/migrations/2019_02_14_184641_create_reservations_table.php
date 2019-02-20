@@ -14,7 +14,7 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->string('rekvirantid');
             $table->foreign('rekvirantid')
-                ->references('rekvirent')
+                ->references('rekvirentid')
                 ->on('rekvirents')
                 ->onDelete('cascade');
             $table->string('roomid');
@@ -26,6 +26,7 @@ class CreateReservationsTable extends Migration
             $table->unique('tid');
             $table->primary(['roomid', 'tid']);
             $table->unique(['tid','rekvirantid']);
+            $table->date('dato');
             $table->timestamps();
         });
     }

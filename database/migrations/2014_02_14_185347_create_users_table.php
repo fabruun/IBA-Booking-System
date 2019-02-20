@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->binary('password');
             $table->enum('type', ['admin', 'student', 'teacher', 'class']);
-            $table->foreign('uid')->references('rekvirent')->on('rekvirents');
+            $table->foreign('uid')->references('rekvirentid')->on('rekvirents');
             $table->rememberToken();
             $table->timestamps();
         });

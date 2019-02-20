@@ -15,7 +15,7 @@ class CreateClassnamesTable extends Migration
         Schema::create('classnames', function (Blueprint $table) {
             $table->increments('id');
             $table->string('classname');
-          //  $table->foreign('classname')->references('rekvirent')->on('rekvirents');
+            $table->foreign('classname')->references('rekvirentid')->on('rekvirents');
             $table->timestamps();
         });
     }
