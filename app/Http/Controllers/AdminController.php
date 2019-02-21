@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Rekvirent;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -15,8 +17,8 @@ class AdminController extends Controller
      */
     public function index() {
         if(Auth::check()){
-            $rekvirents = \App\Rekvirent::all()->sortBy('rekvirentid');
-            return view('admin.index', compact('rekvirents'));
+            $users = User::all()->sortBy('uid');
+            return view('admin.index', compact('users'));
         }
         return redirect('/login');
     }
@@ -37,13 +39,12 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Rekvirent $rekvirent)
+    public function store(User $user)
     {
         Rekvirent::create([
-            'uid' => request('uid'),
             'name' => request('name'),
             'email' => request('email'),
-            'password' => request('password')
+            'uid' => request('uid')
         ]);
         return redirect('/admin');
     }
@@ -54,9 +55,10 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Rekvirent $rekvirent)
-    {
-        return view('admin.show', compact('rekvirent'));
+    public function show($id)
+
+    {   $user = User::find($id);
+        return view('admin.show', compact('user'));
     }
 
     /**
@@ -65,9 +67,11 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rekvirent $rekvirent)
+    public function edit($id)
+
     {
-        return view('admin.edit', compact('rekvirent'));
+        $users = \App\User::findOrFail($id);
+        return view('admin.edit', compact('users'));
     }
 
     /**
@@ -77,11 +81,13 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Rekvirent $rekvirent)
+    public function update($id)
     {
-        $rekvirent->rekvirent = request('rekvirent');
+        $users = User::findOrFail($id);
+        $users->name = request('name');
+        $users->email = request('email');
 
-        $rekvirent->save();
+        $users->save();
 
         return redirect('/admin');
     }
@@ -92,9 +98,9 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rekvirent $rekvirent)
+    public function destroy($id)
     {
-        $rekvirent->delete();
+        $user = User::findOrFail($id)->delete();
         return redirect('admin');
     }
 }
