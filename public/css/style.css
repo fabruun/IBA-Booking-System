@@ -27,3 +27,12 @@
     text-align:center;
     align-items:center;
 }
+
+
+.roomReservations .card {
+    margin: 10px;
+}
+
+.roomReservations {
+    display: inline-flex;
+}
