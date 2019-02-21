@@ -19,6 +19,11 @@ class CreateBookingsTable extends Migration
                 ->references('tid')
                 ->on('reservations')
                 ->onDelete('cascade');
+            $table->date('booking_dato');
+            $table->foreign('booking_dato')
+                ->references('dato')
+                ->on('reservations')
+                ->onDelete('cascade');
             $table->boolean('isReserved');
             $table->timestamps();
         });

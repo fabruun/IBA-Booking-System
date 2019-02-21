@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassesTable extends Migration
+class CreateRekvirentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateClassesTable extends Migration
      */
     public function up()
     {
-        Schema::create('classes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('klassenavn', 16)->unique();
-            $table->foreign('klassenavn')->references('rekvirentid')->on('rekvirents')->onDelete('cascade');
+        Schema::create('rekvirents', function (Blueprint $table) {
+           $table->increments('id');
+            $table->string('rekvirentid')->nullable();
+            $table->unique('rekvirentid');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateClassesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classes');
+        Schema::dropIfExists('rekvirents');
     }
 }

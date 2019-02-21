@@ -28,7 +28,8 @@
                         @foreach ($reservations as $reservation)
                             @if ((Auth::user()->uid) === $reservation->rekvirantid)
                                 <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
-                                    <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
+                                    <li><b>Dato: </b> {{ $reservation->dato }}</li>
+                                    <li><b>Tid: </b> {{ $reservation->tid }}</li>
                                     <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
                                     <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
                                 </div>

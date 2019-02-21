@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Reservation;
 use \App\Room;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,7 +53,10 @@ class RoomController extends Controller
      */
     public function show($roomid) {
         $room = Room::find($roomid);
-        return view('rooms.show', compact('room'));
+        
+        $reservations = Reservation::all();
+
+        return view('rooms.show', compact('room', 'reservations'));
     }
 
     /**

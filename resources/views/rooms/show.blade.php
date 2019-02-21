@@ -26,6 +26,15 @@
                         <h4>Fredag</h4>
                         <div class="day"><a href="#">5/2-2019</a></div>
                     </div>
+                    @foreach ($reservations as $reservation)
+                        @if ($room->roomid === $reservation->roomid)
+                            <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
+                                <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
+                                <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
+                                <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
