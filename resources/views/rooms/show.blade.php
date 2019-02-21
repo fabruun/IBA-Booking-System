@@ -14,20 +14,17 @@
                         </div>
                     @endif
                     <h1>Lokale {{ $room->roomid }}</h1>
-                    <div id="calendar">
-                        <h4>Mandag</h4>
-                        <div class="day"><a href="#">1/1-2019</a></div>
-                        <h4>Tirsdag</h4>
-                        <div class="day"><a href="#">2/2-2019</a></div>
-                        <h4>Onsdag</h4>
-                        <div class="day"><a href="#">3/2-2019</a></div>
-                        <h4>Torsdag</h4>
-                        <div class="day"><a href="#">4/2-2019</a></div>
-                        <h4>Fredag</h4>
-                        <div class="day"><a href="#">5/2-2019</a></div>
-
+                    <div class="roomReservations">
+                    @foreach ($reservations as $reservation)
+                        @if ($room->roomid === $reservation->roomid)
+                            <div class="card" style="padding: 20px; list-style: none;">
+                                <li><b>Dato: </b> {{ $reservation->dato }}</li>
+                                <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>
+                                <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
+                            </div>
+                        @endif
+                    @endforeach
                     </div>
-
                 </div>
             </div>
         </div>

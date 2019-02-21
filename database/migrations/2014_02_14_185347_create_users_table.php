@@ -15,11 +15,11 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('uid')->unique();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->binary('password');
             $table->enum('type', ['admin', 'student', 'teacher', 'class']);
-            $table->foreign('uid')->references('rekvirentid')->on('rekvirents');
+            $table->foreign('uid')->references('rekvirentid')->on('rekvirents')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

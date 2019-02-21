@@ -13,18 +13,29 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <h2>Velkommen {{(Auth::user()->name)}}!</h2>
+                    <h2>Velkommen {{(Auth::user()->name)}}!</h2>
 
-                        <div class="profile_info">
-                            <h4 style="margin-top: 2em;">Dine informationer:</h4>
-                            <p><b>Brugernavn: </b>{{(Auth::user()->uid)}}</p>
-                            <p><b>Navn: </b>{{(Auth::user()->name)}}</p>
-                            <p><b>Email: </b>{{(Auth::user()->email)}}</p>
-                        </div>
+                    <div class="profile_info">
+                        <h4 style="margin-top: 2em;">Dine informationer:</h4>
+                        <p><b>Brugernavn: </b>{{(Auth::user()->uid)}}</p>
+                        <p><b>Navn: </b>{{(Auth::user()->name)}}</p>
+                        <p><b>Email: </b>{{(Auth::user()->email)}}</p>
+                    </div>
 
-                        <div class="personal_bookings">
-                                <h4 style="margin-top: 2em;">Dine reservationer:</h4>
-                        </div>
+                    <div class="personal_bookings">
+                        <h4 style="margin-top: 2em;">Dine reservationer:</h4>
+
+                        @foreach ($reservations as $reservation)
+                            @if ((Auth::user()->uid) === $reservation->rekvirantid)
+                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
+                                    <li><b>Dato: </b> {{ $reservation->dato }}</li>
+                                    <li><b>Tid: </b> {{ $reservation->tid }}</li>
+                                    <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
+                                    <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

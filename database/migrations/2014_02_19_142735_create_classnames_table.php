@@ -1,9 +1,10 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassnamesTable extends Migration
+class CreateClassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +13,10 @@ class CreateClassnamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('classnames', function (Blueprint $table) {
+        Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('classname');
-            $table->foreign('classname')->references('rekvirentid')->on('rekvirents');
+            $table->string('klassenavn', 16)->unique();
+            $table->foreign('klassenavn')->references('rekvirentid')->on('rekvirents')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateClassnamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classnames');
+        Schema::dropIfExists('classes');
     }
 }
