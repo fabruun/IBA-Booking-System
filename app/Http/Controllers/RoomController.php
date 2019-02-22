@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use \App\Reservation;
 use \App\Room;
+use \App\User;
 use Illuminate\Support\Facades\Auth;
 
 

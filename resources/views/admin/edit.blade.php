@@ -24,13 +24,6 @@
                             </div>
                         </div>
 
-                        <div class="field" style="margin-bottom: 1em;">
-                            <label for="uid" class="label"><b>Brugernavn:</b></label>
-                            <div class="control">
-                                <input type="text" class="input" name="uid" placeholder="Brugernavn" value="{{ $users->uid }}">
-                            </div>
-                        </div>
-
                         <div>
                             <div class="control">
                                 <button type="submit" class="btn btn-warning">Opdater</button>

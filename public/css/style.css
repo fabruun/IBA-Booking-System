@@ -28,6 +28,10 @@
     align-items:center;
 }
 
+.align-header {
+    text-align: center;
+}
+
 
 .roomReservations .card {
     margin: 10px;
