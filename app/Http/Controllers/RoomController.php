@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use \App\Reservation;
 use \App\Room;
-use \App\User;
+use \App\Rekvirent;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -32,7 +32,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('/rooms.show'); 
     }
 
     /**
@@ -43,7 +43,18 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $new_reservations = new Reservation();
+
+        $new_reservations->rekvirantid = request('rekvirantid');
+        $new_reservations->roomid = request('roomid');
+        $new_reservations->dato = request('dato');
+        $new_reservations->tid = request('tid');
+
+        $new_reservations->save();
+
+        return redirect('/rooms');
+
     }
 
     /**
@@ -54,10 +65,11 @@ class RoomController extends Controller
      */
     public function show($roomid) {
         $room = Room::find($roomid);
-        
+
+        $rekvirent = Rekvirent::all();
         $reservations = Reservation::all();
 
-        return view('rooms.show', compact('room', 'reservations'));
+        return view('rooms.show', compact('room', 'reservations', 'rekvirent'));
     }
 
     /**

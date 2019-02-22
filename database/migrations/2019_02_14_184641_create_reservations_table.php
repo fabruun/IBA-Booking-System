@@ -24,7 +24,7 @@ class CreateReservationsTable extends Migration
                 ->onDelete('cascade');
             $table->date('dato');
             $table->time('tid');
-            $table->unique(['tid', 'roomid']);
+            $table->unique(['tid', 'roomid', 'dato']);
             $table->primary(['dato', 'roomid', 'tid']);
             $table->unique(['dato', 'tid', 'rekvirantid']);
             $table->timestamps();

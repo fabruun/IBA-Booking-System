@@ -29,6 +29,35 @@
                     </div>
 
                     <h5 style="margin-top: 50px;">Reservér lokalet</h5>
+                    <form action="/rooms" method="POST">
+
+                        @csrf
+
+                        <div>
+                            <select name="rekvirantid">
+                                @foreach ($rekvirent as $rekvirent)
+                                    <option>{{ $rekvirent->rekvirentid }}</option>
+                                @endforeach
+                            </select> 
+                        </div>
+                
+                        <div>
+                            <input type="text" name="roomid" placeholder="roomid" value="{{$room->roomid}}" readonly>
+                        </div>
+                        
+                        <div>
+                            <input type="date" name="dato">
+                        </div>
+
+                        <div>
+                            <input type="time" name="tid" value="08:00"> 
+                        </div>
+
+                        <div>
+                            <button type="submit">Opret reservation</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
