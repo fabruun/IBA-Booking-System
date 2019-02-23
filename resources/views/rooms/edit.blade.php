@@ -22,10 +22,11 @@
                             <li><b>Areal:</b> {{ $room->areasizeofroom }} m<sup>2</sup> </li>
                             <li><b>Antal:</b> {{ $room->personlimit }}</li>
                         </div>
-                        <div style="margin-top:1em;">
+                        <div style="margin-top:1em; margin-bottom: 1em;">
                             <a href="/rooms/{{ $room->id }}"><button class="btn btn-primary" style="margin-right:2em;">Book nu</button></a>
-                            <a href=""><button class="btn btn-primary">Omroker</button></a>
+                            <button class="btn btn-primary" id="createRoom" onclick="draw()">Omroker</button>
                         </div>
+                        <canvas id="canvasRoom" style="border:1px solid black;"></canvas>
 
                     </div>
                 </div>
@@ -34,3 +35,16 @@
     </div>
 
 @endsection
+@include('footervarview')
+<script>
+    'use strict'
+    function draw() {
+        let canvas = document.getElementById('canvasRoom');
+        if (canvas.getContext) {
+            let ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = 'grey';
+            ctx.fillRect(0, 0, 50, 50);
+        }
+    }
+</script>
