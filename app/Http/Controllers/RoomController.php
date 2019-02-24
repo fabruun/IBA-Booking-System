@@ -107,6 +107,9 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reservation = Reservation::findorfail($id)->delete();
+        // Gør det muligt at den sletter fra database.
+
+        return redirect('/home');
     }
 }

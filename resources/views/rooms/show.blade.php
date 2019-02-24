@@ -34,7 +34,7 @@
                         @csrf
 
                         <div>
-                            <select name="rekvirantid">
+                            <select class="field" style="margin-bottom: 1em;" name="rekvirantid">
                                 @foreach ($rekvirent as $rekvirent)
                                     <option>{{ $rekvirent->rekvirentid }}</option>
                                 @endforeach
@@ -42,22 +42,31 @@
                         </div>
                 
                         <div>
-                            <input type="text" name="roomid" placeholder="roomid" value="{{$room->roomid}}" readonly>
+                            <input style="margin-bottom: 1em;" type="text" name="roomid" placeholder="roomid" value="{{$room->roomid}}" readonly>
                         </div>
                         
                         <div>
-                            <input type="date" name="dato">
+                            <input style="margin-bottom: 1em;" type="date" name="dato">
                         </div>
 
                         <div>
-                            <input type="time" name="tid" value="08:00"> 
+                            <select name="tid" size="9" style="margin-bottom: 1em">
+                                <option value="08:00:00">08:00:00</option>
+                                <option value="09:00:00">09:00:00</option>
+                                <option value="10:00:00">10:00:00</option>
+                                <option value="11:00:00">11:00:00</option>
+                                <option value="12:00:00">12:00:00</option>
+                                <option value="13:00:00">13:00:00</option>
+                                <option value="14:00:00">14:00:00</option>
+                                <option value="15:00:00">15:00:00</option>
+                                <option value="16:00:00">16:00:00</option>
+                            </select> 
                         </div>
 
                         <div>
-                            <button type="submit">Opret reservation</button>
+                            <button class="btn btn-success" type="submit">Opret reservation</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

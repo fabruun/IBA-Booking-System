@@ -40,3 +40,9 @@
 .roomReservations {
     display: inline-flex;
 }
+
+.delete-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

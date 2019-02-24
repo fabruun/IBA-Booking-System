@@ -28,6 +28,11 @@
                         @foreach ($reservations as $reservation)
                             @if ((Auth::user()->uid) === $reservation->rekvirantid)
                                 <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
+                                <form class="delete-form" method="post" action="rooms/{{$reservation->id}}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button title="Slet reservation" class="btn btn-danger" type="submit">x</button>
+                                    </form>
                                     <li><b>Dato: </b> {{ $reservation->dato }}</li>
                                     <li><b>Tid: </b> {{ $reservation->tid }}</li>
                                     <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
