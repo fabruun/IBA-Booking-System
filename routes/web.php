@@ -26,3 +26,5 @@ Route::get('/', function (){
 Route::resource('/rooms', 'RoomController');
 Route::resource('home', 'ReservationController');
 Route::resource('admin', 'AdminController');
+
+Route::get('canvas', 'CanvasController@test');
