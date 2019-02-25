@@ -4,9 +4,9 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card">
-
+                <div class="card-header">Book et lokale</div>
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -23,10 +23,11 @@
                             <li><b>Antal:</b> {{ $room->personlimit }}</li>
                         </div>
                         <div style="margin-top:1em;">
+                            <a href="/rooms/{{ $room->id }}"><button class="btn btn-primary" style="margin-right:2em;">Book nu</button></a>
+                            @if(Auth::user()->type == 'admin' || Auth::user()->type == 'teacher')
+                            <a href=""><button class="btn btn-primary">Omroker</button></a>
+                            @endif
                         </div>
-
-
-
 
                     </div>
                 </div>

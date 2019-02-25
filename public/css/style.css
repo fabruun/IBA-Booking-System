@@ -28,11 +28,26 @@
     align-items:center;
 }
 
+.align-header {
+    text-align: center;
+}
+
 
 .roomReservations .card {
     margin: 10px;
 }
 
 .roomReservations {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.delete-form {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.delete-form .btn {
+    padding: 0 8px;
 }

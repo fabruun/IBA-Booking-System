@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use \App\Reservation;
 use \App\Room;
+use \App\Rekvirent;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -31,7 +32,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('/rooms.show'); 
     }
 
     /**
@@ -42,7 +43,18 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $new_reservations = new Reservation();
+
+        $new_reservations->rekvirantid = request('rekvirantid');
+        $new_reservations->roomid = request('roomid');
+        $new_reservations->dato = request('dato');
+        $new_reservations->tid = request('tid');
+
+        $new_reservations->save();
+
+        return redirect('home');
+
     }
 
     /**
@@ -53,10 +65,11 @@ class RoomController extends Controller
      */
     public function show($roomid) {
         $room = Room::find($roomid);
-        
-        $reservations = Reservation::all();
 
-        return view('rooms.show', compact('room', 'reservations'));
+        $rekvirent = Rekvirent::all();
+        $reservations = Reservation::all()->sortBy('tid')->sortBy('dato');
+
+        return view('rooms.show', compact('room', 'reservations', 'rekvirent'));
     }
 
     /**
@@ -94,6 +107,9 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reservation = Reservation::findorfail($id)->delete();
+        // Gør det muligt at den sletter fra database.
+
+        return redirect('/home');
     }
 }

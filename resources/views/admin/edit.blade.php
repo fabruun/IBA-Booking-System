@@ -1,8 +1,11 @@
 @extends("layouts.loggedin")
 
 @section('content')
-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
             <div class="card">
+                <div class="card-header">Admin</div>
                 <div class="card-body">
                     <h2 class="title">Rekvirentoplysninger</h2>
                     <h5>Bruger: {{ $users->uid }}</h5>
@@ -25,9 +28,14 @@
                         </div>
 
                         <div class="field" style="margin-bottom: 1em;">
-                            <label for="uid" class="label"><b>Brugernavn:</b></label>
+                            <label for="type" class="label"><b>Type:</b></label>
                             <div class="control">
-                                <input type="text" class="input" name="uid" placeholder="Brugernavn" value="{{ $users->uid }}">
+                                <select name="type" style="margin-bottom: 1em">
+                                    <option value="admin">Administrator</option>
+                                    <option value="teacher">Lærer</option>
+                                    <option value="student">Studerende</option>
+                                    <option value="class">Klasse</option>
+                                </select> 
                             </div>
                         </div>
 
@@ -48,6 +56,8 @@
                     </form>
 
                 </div>
+            </div>
+        </div>
     </div>
-
+</div>
 @endsection

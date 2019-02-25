@@ -15,7 +15,8 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $reservations = \App\Reservation::all();
+
+        $reservations = \App\Reservation::all()->sortBy('tid')->sortBy('dato');
         return view('home', compact('reservations'));
       }
 

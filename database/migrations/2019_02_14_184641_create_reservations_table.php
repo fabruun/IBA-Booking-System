@@ -12,6 +12,7 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('rekvirantid');
             $table->foreign('rekvirantid')
                 ->references('rekvirentid')
@@ -24,8 +25,8 @@ class CreateReservationsTable extends Migration
                 ->onDelete('cascade');
             $table->date('dato');
             $table->time('tid');
-            $table->unique(['tid', 'roomid']);
-            $table->primary(['dato', 'roomid', 'tid']);
+            $table->unique(['tid', 'roomid', 'dato']);
+            $table->unique(['dato', 'roomid', 'tid']);
             $table->unique(['dato', 'tid', 'rekvirantid']);
             $table->timestamps();
         });

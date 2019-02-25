@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Profile</div>
 
@@ -25,16 +25,25 @@
                     <div class="personal_bookings">
                         <h4 style="margin-top: 2em;">Dine reservationer:</h4>
 
+                    <div class="roomReservations">
                         @foreach ($reservations as $reservation)
                             @if ((Auth::user()->uid) === $reservation->rekvirantid)
-                                <div class="card" style="margin-bottom: 1em; width: 14em; padding: 20px; list-style: none;">
-                                    <li><b>Dato: </b> {{ $reservation->dato }}</li>
-                                    <li><b>Tid: </b> {{ $reservation->tid }}</li>
-                                    <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
-                                    <li><b>Lokale: </b>{{ $reservation->roomid }}</li>
+                            
+                                <div class="card" style="list-style: none; padding: 20px;">
+                                <form class="delete-form" method="post" action="rooms/{{$reservation->id}}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button title="Slet reservation" class="btn btn-danger" type="submit">x</button>
+                                    </form>
+                                    <li><b>Dato:</b> {{ date('d-m-Y', strtotime($reservation->dato)) }}</li>
+                                    <li><b>Tid:</b> {{ $reservation->tid }}</li>
+                                    <li><b>Brugernavn:</b> {{ $reservation->rekvirantid }}</li>
+                                    <li><b>Lokale:</b> {{ $reservation->roomid }}</li>
                                 </div>
                             @endif
                         @endforeach
+                    </div>
+
                     </div>
                 </div>
             </div>

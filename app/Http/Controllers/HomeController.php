@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Reservation;
+
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -37,7 +39,5 @@ class HomeController extends Controller
         if(Auth::check()){
             return view('home');
         }
-
-
     }
 }
