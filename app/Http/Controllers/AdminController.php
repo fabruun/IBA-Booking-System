@@ -32,13 +32,6 @@ class AdminController extends Controller
     {
         return view('/admin.show'); 
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $new_rekvirent = new Rekvirent();
@@ -77,13 +70,6 @@ class AdminController extends Controller
         return redirect('home');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update($id)
     {
         $users = User::findOrFail($id);
@@ -96,15 +82,10 @@ class AdminController extends Controller
         return redirect('/admin');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $user = User::findOrFail($id)->delete();
         return redirect('admin');
     }
 }
+

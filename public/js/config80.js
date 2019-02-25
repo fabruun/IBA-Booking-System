@@ -198,3 +198,4 @@ var cshapes = [];
 var room;
 
 window.addEventListener('load', initialize);
+
