@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19a6d485-b31e-4ede-bc15-b82418419221" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" afterDir="false" />
     </list>
@@ -31,11 +30,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
-              <caret line="582" column="20" selection-start-line="582" selection-start-column="20" selection-end-line="582" selection-end-column="20" />
+              <caret line="622" column="53" selection-start-line="622" selection-start-column="53" selection-end-line="622" selection-end-column="53" />
+              <folding>
+                <element signature="n#script#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/nQuery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/nmlCanvas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/nmlShape.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="193" column="2" lean-forward="true" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/config80.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -56,6 +106,9 @@
       <find>home</find>
       <find>uid</find>
       <find>chimney</find>
+      <find>box</find>
+      <find>select</find>
+      <find>cv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -65,9 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SingleRoomController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_18_152430_create_bookings_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
@@ -103,10 +153,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/CanvasController.php" />
         <option value="$PROJECT_DIR$/public/room.json" />
         <option value="$PROJECT_DIR$/public/rooms.json" />
-        <option value="$PROJECT_DIR$/public/js/nQuery.js" />
         <option value="$PROJECT_DIR$/public/js/canvas.js" />
         <option value="$PROJECT_DIR$/public/js/shape.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" />
         <option value="$PROJECT_DIR$/public/js/index.js" />
         <option value="$PROJECT_DIR$/public/js/room.js" />
         <option value="$PROJECT_DIR$/public/js/toolbox.js" />
@@ -115,7 +163,12 @@
         <option value="$PROJECT_DIR$/../public/js/toolbox.js" />
         <option value="$PROJECT_DIR$/../resources/views/rooms/edit.blade.php" />
         <option value="$PROJECT_DIR$/../../JavaScript/JS-oop/3_prototypes.js" />
+        <option value="$PROJECT_DIR$/public/js/nQuery.js" />
+        <option value="$PROJECT_DIR$/public/js/nmlShape.js" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/nmlCanvas.js" />
+        <option value="$PROJECT_DIR$/public/js/config80.js" />
       </list>
     </option>
   </component>
@@ -215,9 +268,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="8" />
-    <option name="width" value="909" />
-    <option name="height" value="1025" />
+    <option name="x" value="822" />
+    <option name="width" value="1098" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -225,18 +278,57 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JS-oop" type="462c0819:PsiDirectoryNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBA-Booking-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="IBA-Booking-System" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,12 +385,13 @@
       <workItem from="1551013229637" duration="10377000" />
       <workItem from="1551041462150" duration="2332000" />
       <workItem from="1551078599652" duration="962000" />
-      <workItem from="1551099354673" duration="12526000" />
+      <workItem from="1551099354673" duration="12667000" />
+      <workItem from="1551114909573" duration="2339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108489000" />
+    <option name="totallyTimeSpent" value="110969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,10 +403,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1928" height="1038" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1034" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2170418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2170418" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -328,7 +421,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32957748" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24911869" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2479436" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,11 +454,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../app/Http/Controllers/Auth/RegisterController.php" />
-    <entry file="file://$PROJECT_DIR$/../app/Http/Kernel.php" />
-    <entry file="file://$PROJECT_DIR$/../database/migrations/2009_02_19_100115_create_rekvirents_table.php" />
-    <entry file="file://$PROJECT_DIR$/../app/Room.php" />
-    <entry file="file://$PROJECT_DIR$/../app/Reservation.php" />
     <entry file="file://$PROJECT_DIR$/../app/Rekvirent.php" />
     <entry file="file://$PROJECT_DIR$/../app/Http/Controllers/RoomController.php" />
     <entry file="file://$PROJECT_DIR$/../join.sql" />
@@ -449,10 +537,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/nQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/nmlShape.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="193" column="2" lean-forward="true" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="582" column="20" selection-start-line="582" selection-start-column="20" selection-end-line="582" selection-end-column="20" />
+          <caret line="622" column="53" selection-start-line="622" selection-start-column="53" selection-end-line="622" selection-end-column="53" />
+          <folding>
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/nmlCanvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/config80.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
         </state>
       </provider>
     </entry>

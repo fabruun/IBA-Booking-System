@@ -23,8 +23,6 @@
                             <li><b>Antal:</b> {{ $room->personlimit }}</li>
                         </div>
                         <div style="margin-top:1em;">
-                            <a href="/rooms/{{ $room->id }}"><button class="btn btn-primary" style="margin-right:2em;">Book nu</button></a>
-                            <button class="btn btn-primary" id="getUsers" onclick="setup()">Make Canvas</button>
                         </div>
 
 
@@ -154,7 +152,7 @@
         }
         xhr.send();
     }
-    */
+
 
     let Canvas = {
         init(canvasId, color) {
@@ -460,6 +458,23 @@
         box.canvas.addEventListener('click', select);
     }
 
+    let redraw = function () {
+        // clear canvas
+        cv.clear();
+        // prep canvas with background color
+        cv.prep();
+        // loop through the array and draw the shapes
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].draw();
+        }
+    }
+
+    let repeater = function(cv, arr) {
+        // if this is an animation build a setInterval loop here
+        // if not, just draw this once
+        redraw(cv, arr);
+    }
+
 
     let select = function(ev) {
         // for each array shape in the box
@@ -564,25 +579,45 @@
         for (let i = 0; i < cshapes.length; i++) {
             let cx = cshapes[i].ctx; // get context from array obj
             cx.beginPath(); // simulate it's path
-            cx.rect (cshapes[i].x, cshapes[i].y, cshapes[i].width, cshapes[i].height);
+            cx.rect(cshapes[i].x, cshapes[i].y, cshapes[i].width, cshapes[i].height);
             cx.closePath();
             let mcoord = mouseToCanvasCoordinatesNML(ev);
             if (cx.isPointInPath(mcoord['x'], mcoord['y'])) {   // is this the hit shape
                 let offsetX = mcoord['x'] - cshapes[i].getX();
-                let offsetY = mcoord['y'] -  cshapes[i].getY();
-                room.canvas.addEventListener('mousemove', function mouseMover (ev) {
+                let offsetY = mcoord['y'] - cshapes[i].getY();
+                room.canvas.addEventListener('mousemove', function mouseMover(ev) {
                     room.canvas.addEventListener('mouseup', function () {
                         room.canvas.removeEventListener('mousemove', mouseMover);
                     });
                     let ccord = mouseToCanvasCoordinatesNML(ev);
                     let cshape = Object.create(Shape);
-                    cshape.init (room,
-                                ccord['x'] - offsetX,
-                                ccord['y'] - offsetY,
-                                cshapes[i].getWidth(), cshapes[i].getHeight(),
-                    )
-                })
+                    cshape.init(room,
+                        ccord['x'] - offsetX,
+                        ccord['y'] - offsetY,
+                        cshapes[i].getWidth(), cshapes[i].getHeight(),
+                        cshapes[i].getColor(),
+                        cshapes[i].getPrice(), cshapes[i].getType());
+                    for (let j = 0; j < cshapes[i].length; j++) {
+                        if (i === j) continue;
+                        if (!cshape.isOverlapping(cshapes[j]) && cshape.isFullyInsideRoom()) {
+                            cshapes[i].move(cshape.getX(), cshape.getY());
+                        }
+                    }
+                });
+                break;
             }
         }
     }
+
+    let shapes = [];
+    let box;
+    let cshapes = [];
+    let room;
+
+    window.addEventListener('load', initialize); */
+
 </script>
+<script src="{{ asset('js/nQuery.js') }}"></script>
+<script src="{{ asset('js/nmlCanvas.js') }}"></script>
+<script src="{{ asset('js/nmlShape.js') }}"></script>
+<script src="{{ asset('js/config80.js') }}"></script>
