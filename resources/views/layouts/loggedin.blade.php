@@ -11,6 +11,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/nQuery.js') }}"></script>
+    <script src="{{ asset('js/nmlCanvas.js') }}"></script>
+    <script src="{{ asset('js/nmlShape.js') }}"></script>
+    <script src="{{ asset('js/config80.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
