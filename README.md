@@ -7,3 +7,4 @@ JavaScript
 
 ## Log in
 Create a rekvirent (username) in database to use that as username in the register form.
+Give one user the type of admin in database to see the wole application. 
