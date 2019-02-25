@@ -46,12 +46,11 @@
                     <div id='work'></div>
                     <div id='spacer'></div>
                     <div>
-                        <form id='inputpanel' method='post' action='#'>
+                        <form id='inputpanel' method='post' action='#' style="margin-top:2em;">
                             <input type='number' name='wid' placeholder='width in cms'/>
                             <input type='number' name='hei' placeholder='height in cms'/>
                             <br/>
-                            <input type='button' name='bt1' value='Create/Recreate Room'/>
-                            <input type='button' name='btf' value='Calculate if finished'/>
+                            <button type='button' name='bt1' class="btn btn-primary" style="margin-top:2em;">Create/Recreate Room</button>
                         </form>
                     </div>
                     <div id='calculation'></div>

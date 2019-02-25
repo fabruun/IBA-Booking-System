@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19a6d485-b31e-4ede-bc15-b82418419221" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/config80.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/config80.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,9 +33,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="622" column="53" selection-start-line="622" selection-start-column="53" selection-end-line="622" selection-end-column="53" />
+            <state relative-caret-position="1288">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
+                <element signature="n#style#0;n#form#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#script#0;n#!!top" />
               </folding>
             </state>
@@ -84,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/config80.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="532">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -166,8 +168,8 @@
         <option value="$PROJECT_DIR$/public/js/nQuery.js" />
         <option value="$PROJECT_DIR$/public/js/nmlShape.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/js/nmlCanvas.js" />
+        <option value="$PROJECT_DIR$/resources/views/rooms/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/js/config80.js" />
       </list>
     </option>
@@ -386,12 +388,12 @@
       <workItem from="1551041462150" duration="2332000" />
       <workItem from="1551078599652" duration="962000" />
       <workItem from="1551099354673" duration="12667000" />
-      <workItem from="1551114909573" duration="2339000" />
+      <workItem from="1551114909573" duration="3971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110969000" />
+    <option name="totallyTimeSpent" value="112601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/nmlShape.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="193" column="2" lean-forward="true" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/loggedin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -560,11 +555,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rooms/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="622" column="53" selection-start-line="622" selection-start-column="53" selection-end-line="622" selection-end-column="53" />
+        <state relative-caret-position="1288">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding>
+            <element signature="n#style#0;n#form#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#script#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/nmlShape.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="193" column="2" lean-forward="true" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -580,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/config80.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+        <state relative-caret-position="532">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>

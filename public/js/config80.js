@@ -9,37 +9,14 @@ var initialize = function () {
     box.init('toolbox', '#ccc');
     // create shapes and place in array
     let shape = Object.create(Shape);
-    shape.init(box, 10, 10, 60, 20, '#00f', 10000, 'stoker');
+    shape = Object.create(Shape);
+    shape.init(box, 10, 150, 80, 80, 'black');
     shapes.push(shape);
     shape = Object.create(Shape);
-    shape.init(box, 10, 40, 80, 30, '#00c', 15000, 'stoker');
+    shape.init(box, 10, 25, 160, 80, 'black');
     shapes.push(shape);
     shape = Object.create(Shape);
-    shape.init(box, 10, 80, 100, 40, '#009', 20000, 'stoker');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 130, 60, 10, '#0f0', 12000, 'feeder');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 150, 80, 15, '#0c0', 16000, 'feeder');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 175, 100, 20, '#090', 20000, 'feeder');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 205, 20, 20, '#f00', 4000, 'tank');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 235, 40, 40, '#c00', 8000, 'tank');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 10, 285, 80, 80, '#900', 12000, 'tank');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 220, 205, 20, 20, '#fff', 0, 'chimney');
-    shapes.push(shape);
-    shape = Object.create(Shape);
-    shape.init(box, 160, 235, 80, 160, 'transparent', 0, 'door');
+    shape.init(box, 10, 250, 25, 25);
     shapes.push(shape);
     // draw them
     repeater(box, shapes);
@@ -64,6 +41,7 @@ var drawRoom = function () {
     room.init('room', '#ee0');  // and create object ref
     // make toolbox canvas click sensitive
     box.canvas.addEventListener('click', select);
+    document.getElementById('room').style.marginTop = '2em';
 }
 
 var redraw = function (cv, arr) {
@@ -110,14 +88,14 @@ var select = function (ev) {
                         room.canvas.removeEventListener('click', placeInRoom);
                         return;
                     }
-                    if (cshapes[j].getType() === cshape.getType()) {
+                   /* if (cshapes[j].getType() === cshape.getType()) {
                         window.alert("There's already a "+cshape.getType()+" in the room");
                         room.canvas.removeEventListener('click', placeInRoom);
                         return;
-                    }
+                    }*/
 
                 }
-                if (cshape.getType() === 'chimney' && !cshape.isChimneyRules()) {
+                /*if (cshape.getType() === 'chimney' && !cshape.isChimneyRules()) {
                     window.alert("Chimney must be near wall");
                     room.canvas.removeEventListener('click', placeInRoom);
                     return;
@@ -131,7 +109,7 @@ var select = function (ev) {
                     window.alert("Not fully inside room. Intersects wall.");
                     room.canvas.removeEventListener('click', placeInRoom);
                     return;
-                }
+                }*/
                 cshapes.push(cshape);
                 if (cshapes.length === 1) {
                     room.canvas.addEventListener('mousedown', mouseDowner);
