@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->binary('password');
-            $table->enum('type', ['admin', 'student', 'teacher', 'class']);
+            $table->string('type')->default('student');
             $table->foreign('uid')->references('rekvirentid')->on('rekvirents')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();

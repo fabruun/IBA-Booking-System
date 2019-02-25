@@ -40,9 +40,11 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
+                    @if(Auth::user()->type == 'admin')
                     <li class="nav-item">
                         <a href="/admin" class="nav-link">Admin</a>
                     </li>
+                    @endif
                     <li class="nav-item">
                         <a href="/rooms" class="nav-link">Book et lokale</a>
                     </li>

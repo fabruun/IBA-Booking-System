@@ -16,7 +16,7 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        if(Auth::check()){
+        if(Auth::user()->type == 'admin'){
             $users = User::all()->sortBy('uid');
             return view('admin.index', compact('users'));
         }
@@ -30,7 +30,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        return view('/admin.show'); 
     }
 
     /**
@@ -39,14 +39,14 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(User $user)
+    public function store(Request $request)
     {
-        Rekvirent::create([
-            'name' => request('name'),
-            'email' => request('email'),
-            'uid' => request('uid')
-        ]);
-        return redirect('/admin');
+        $new_rekvirent = new Rekvirent();
+        $new_rekvirent->rekvirentid = request('rekvirentid');
+
+        $new_rekvirent->save();
+
+        return redirect('home');
     }
 
     /**
@@ -68,10 +68,13 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-
     {
+        if(Auth::user()->type == 'admin'){
         $users = \App\User::findOrFail($id);
         return view('admin.edit', compact('users'));
+        }
+
+        return redirect('home');
     }
 
     /**
@@ -86,6 +89,7 @@ class AdminController extends Controller
         $users = User::findOrFail($id);
         $users->name = request('name');
         $users->email = request('email');
+        $users->type = request('type');
 
         $users->save();
 

@@ -53,7 +53,7 @@ class RoomController extends Controller
 
         $new_reservations->save();
 
-        return redirect('/rooms');
+        return redirect('home');
 
     }
 
@@ -67,7 +67,7 @@ class RoomController extends Controller
         $room = Room::find($roomid);
 
         $rekvirent = Rekvirent::all();
-        $reservations = Reservation::all();
+        $reservations = Reservation::all()->sortBy('tid')->sortBy('dato');
 
         return view('rooms.show', compact('room', 'reservations', 'rekvirent'));
     }

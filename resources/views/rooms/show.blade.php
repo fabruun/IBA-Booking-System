@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Book et lokale</div>
                 <div class="card-body">
@@ -20,7 +20,7 @@
                     @foreach ($reservations as $reservation)
                         @if ($room->roomid === $reservation->roomid)
                             <div class="card" style="padding: 20px; list-style: none;">
-                                <li><b>Dato: </b> {{ $reservation->dato }}</li>
+                                <li><b>Dato: </b> {{ date('d-m-Y', strtotime($reservation->dato)) }}</li>
                                 <li><b>Tidspunkt: </b> {{ $reservation->tid }}</li>                                
                                 <li><b>Brugernavn: </b> {{ $reservation->rekvirantid }}</li>
                             </div>
@@ -34,11 +34,15 @@
                         @csrf
 
                         <div>
+                            @if(Auth::user()->type == 'admin')
                             <select class="field" style="margin-bottom: 1em;" name="rekvirantid">
                                 @foreach ($rekvirent as $rekvirent)
                                     <option>{{ $rekvirent->rekvirentid }}</option>
                                 @endforeach
-                            </select> 
+                            </select>
+                            @else 
+                                <input style="margin-bottom: 1em;" type="text" name="rekvirantid" placeholder="roomid" value="{{Auth::user()->uid}}" readonly>
+                            @endif
                         </div>
                 
                         <div>

@@ -38,11 +38,16 @@
 }
 
 .roomReservations {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .delete-form {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: -5px;
+}
+
+.delete-form .btn {
+    padding: 0 8px;
 }

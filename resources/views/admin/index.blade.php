@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Admin</div>
                 <div class="card-body">
@@ -17,8 +17,21 @@
 
                     </ul>
                     @endforeach
-                </div>
+                
+                    <h5 style="margin-top: 50px;">Opret brugernavn</h5>
+                    
+                    <form action="/admin" method="post">
+                        @csrf
 
+                        <div>
+                            <input type="text" name="rekvirentid" placeholder="Indsæt brugernavn">
+                        </div>
+
+                        <div>
+                            <button style="margin-top: .5em;" class="btn btn-success" type="submit">Opret brugernavn</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
