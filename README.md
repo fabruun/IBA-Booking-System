@@ -5,4 +5,5 @@ containing a
 and room editing made with HTML Canvas and
 JavaScript
 
-## TEST
+## Log in
+Create a rekvirent (username) in database to use that as username in the register form.
