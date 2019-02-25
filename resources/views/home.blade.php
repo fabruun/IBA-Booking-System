@@ -25,7 +25,7 @@
                     <div class="personal_bookings">
                         <h4 style="margin-top: 2em;">Dine reservationer:</h4>
 
-                    <div class="roomReservations">
+                    <div class="home roomReservations">
                         @foreach ($reservations as $reservation)
                             @if ((Auth::user()->uid) === $reservation->rekvirantid)
                             

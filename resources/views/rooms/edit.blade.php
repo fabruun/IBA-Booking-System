@@ -24,42 +24,29 @@
                         </div>
                         <div style="margin-top:1em;">
                             <a href="/rooms/{{ $room->id }}"><button class="btn btn-primary" style="margin-right:2em;">Book nu</button></a>
-                            @if(Auth::user()->type == 'admin' || Auth::user()->type == 'teacher')
-                            <a href=""><button class="btn btn-primary">Omroker</button></a>
-                            @endif
                         </div>
 
+
+                        @if(Auth::user()->type == 'admin' || Auth::user()->type == 'teacher')
+                        <h1 style="margin-top: 50px">Omroker rum</h1>
+                        <div id='lib'>
+                            <canvas id='toolbox' width='250' height='400'></canvas>
+                        </div>
+                        <div id='work'></div>                    
+                        <div id='spacer'></div>
+                            <form id='inputpanel' method='post' action='#' style="margin-top:2em;">
+                                <input type='number' name='wid' placeholder='bredde i cm'/>
+                                <input type='number' name='hei' placeholder='højde i cm'/>
+                                <br/>
+                                <button type='button' name='bt1' class="btn btn-primary" style="margin-top:2em;">Opret rum</button>
+                            </form>
+                        </div>
+                        <div id='calculation'></div>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <h1>Configurator Experimentarium</h1>
-                    <p>
-                        Take shapes from shape library and place them in room.
-                        Draw room with user entered mesurements.
-                    </p>
-                    <div id='lib'>
-                        <canvas id='toolbox' width='250' height='400'></canvas>
-                    </div>
-                    <div id='work'></div>
-                    <div id='spacer'></div>
-                    <div>
-                        <form id='inputpanel' method='post' action='#' style="margin-top:2em;">
-                            <input type='number' name='wid' placeholder='width in cms'/>
-                            <input type='number' name='hei' placeholder='height in cms'/>
-                            <br/>
-                            <button type='button' name='bt1' class="btn btn-primary" style="margin-top:2em;">Create/Recreate Room</button>
-                        </form>
-                    </div>
-                    <div id='calculation'></div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
 @endsection
