@@ -1,0 +1,64 @@
+[
+  {
+    "roomid": 401,
+    "roomwidth": 7.5,
+    "roomlength": 8.607
+  },
+  {
+    "roomid": 402,
+    "roomwidth": 7.225,
+    "roomlength": 7.5
+  },
+  {
+    "roomid": 403,
+    "roomwidth": 7.5,
+    "roomlength": 7.813
+  },
+  {
+    "roomid": 404,
+    "roomwidth": 7.5,
+    "roomlength": 9.913
+  },
+  {
+    "roomid": 405,
+    "roomwidth": 7.5,
+    "roomlength": 9.925
+  },
+  {
+    "roomid": 406,
+    "roomwidth": 7.580,
+    "roomlength": 9.973
+  },
+
+  {
+    "roomid": 407,
+    "roomwidth": 7.5,
+    "roomlength": 11.176
+  },
+  {
+    "roomid": 408,
+    "roomwidth": 5.875,
+    "roomlength": 8.413
+  },
+  {
+    "roomid": 409,
+    "roomwidth": 2.425,
+    "roomlength": 3.010
+  },
+  {
+    "roomid": 410,
+    "roomwidth": 6.030,
+    "roomlength": 6.625
+  },
+  {
+    "roomid": 411,
+    "roomwidth": 6.030,
+    "roomlength": 9.913
+  },
+  {
+    "roomid": 412,
+    "roomwidth": 3.517,
+    "roomlength": 4.175
+  }
+
+]
