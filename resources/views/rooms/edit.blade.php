@@ -58,7 +58,7 @@
     function makeCanvas() {
         //XHR
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', '{!! asset('room.json') !!}');
+        xhr.open('GET', '{!! asset('room.json') !!}', true);
         xhr.onload = function() {
             if(this.status === 200) {
                 let room = JSON.parse(this.responseText);
